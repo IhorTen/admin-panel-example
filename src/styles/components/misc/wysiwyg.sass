@@ -1,0 +1,41 @@
+@import "styles/vars"
+
+div.wysiwyg-wrap
+
+    div.wysiwyg-head
+        display: flex
+        justify-content: flex-start
+        margin-top: 10px
+
+    div.wysiwyg-head-left
+        display: flex
+
+    div.wysiwyg-input
+        margin-top: 10px
+        padding: 10px
+        width: 100%
+        min-height: 200px
+        border: 1px solid #000
+        word-wrap: break-word
+
+    input#download-file
+        display: none
+
+    label.download-file
+        cursor: pointer
+        background: $colorMain
+        padding: 10px 25px
+        border: 1px solid $colorMain
+        font-size: 21px
+        border-radius: 5px
+        color: $textBtn
+
+    select#font-size-select
+        border: 1px solid $colorMain
+        border-radius: 5px
+        padding: 0 20px
+        font-size: 21px
+        margin-left: 10px
+
+    textarea.wysiwyg-textarea
+        display: none

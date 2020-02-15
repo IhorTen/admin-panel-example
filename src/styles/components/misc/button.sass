@@ -1,0 +1,58 @@
+@import "styles/vars"
+
+button.u-button
+    font-size: 15px
+    border-radius: 3px
+    color: $textBtn
+    text-align: center
+    padding: 7px 10px
+    cursor: pointer
+    min-width: 110px
+    max-height: 45px
+    transition: 0.3s
+    text-transform: uppercase
+    font-weight: 700
+    *
+        color: $textBtn
+
+    &.refresh
+        margin: auto 5px
+        +tabletA
+            min-width: 20px
+        +tabletB
+            display: none
+        span
+            padding: 0px 4px
+            +tabletA
+                display: none
+
+    &.mainColor
+        background: $colorMain
+        border: 1px solid $colorMain
+        &:hover
+            background: $hoverMain
+            color: #fff
+
+    &.negativeColor
+        background: $negativeColor
+        border: 1px solid $negativeColor
+        &:hover
+            background: $hoverNegative
+
+    &.bold
+        font-weight: 700
+
+    &.ml
+        margin-left: 10px
+
+    &.mr
+        margin-right: 10px
+
+    &.mb
+        margin-bottom: 10px
+
+    &.mt
+        margin-top: 10px
+
+    &.right
+        margin-left: auto

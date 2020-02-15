@@ -1,0 +1,145 @@
+@import "styles/vars"
+
+div.template-send-to
+    text-align: center
+
+    button.btn-import,
+    input.temp-name
+        display: block
+        margin: 0 auto
+
+    div.send-to-content
+        margin: 0 auto
+        max-width: 400px
+        &.mail
+            max-width: 700px
+            div.wysiwyg-head
+                justify-content: center
+                margin-top: 0
+
+        .send-to-tittle
+            margin-top: 10px
+            margin-bottom: 10px
+            text-align: start
+
+        .btn-import,
+        .btn-send,
+            font-size: 18px
+            line-height: 22px
+            min-width: auto
+            min-height: auto
+
+        .data-chip-wrap
+            width: 400px
+            position: relative
+            border: 1px solid $borderInput
+            border-radius: 5px
+            padding: 5px 3px
+            margin-bottom: 30px
+            min-height: 35px
+            text-align: start
+            overflow: auto
+            max-height: 200px
+            &.invalid
+                border: 1px solid $hoverNegative
+
+            .data-chip
+                background: #FFFFFF
+                display: inline-block
+                position: relative
+                font-size: 13px
+                height: 26px
+                padding: 0 0 0 10px
+                margin: 0 3px 0.3rem 0
+                border-radius: 13px
+                box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25)
+                transform: matrix(1, 0, 0, 1, 0, 0)
+                .chip-btn
+                    background-color: #1E90FF
+                    color: #FFFFFF
+                    width: 26px
+                    height: 26px
+                    border-radius: 50%
+                    cursor: pointer
+                    font: inherit
+                    margin-left: 5px
+                    &:hover
+                        background-color: #1e54ff
+
+            .recipients-input
+                height: 23px
+                font-size: 15px
+                width: 100%
+                padding-left: 5px
+                border-radius: 5px
+
+        .modify-template
+            margin-top: 40px
+            &.sms
+                position: relative
+                label
+                    position: absolute
+                    bottom: 8px
+                    right: 15px
+                    input
+                        margin-right: 5px
+            &.mail
+                max-width: 700px
+                div.wysiwyg-head
+                    justify-content: center
+                    margin-top: 0
+                .btn-send-wrap
+                    position: relative
+                    label
+                        position: absolute
+                        top: 10px
+                        right: 20px
+                        input
+                            margin-right: 5px
+            .temp-name,
+                font-size: 18px 
+                min-width: 400px
+                padding: 5px
+                border: 1px solid $borderInput
+                border-radius: 5px
+                margin-bottom: 20px
+            .temp-cont
+                min-width: 400px
+                padding: 5px
+                border: 1px solid $borderInput
+                border-radius: 5px
+                margin-bottom: 20px
+                text-align: start
+                &.sms
+                    font-size: 18px
+
+                &.wysiwyg-input
+                    min-width: $mailTemplateWidth
+                    width: auto
+                    margin: 15px calc((400px - (100vw/2))/2)
+                    height: 250px
+            .btnTemplateChange
+                min-height: auto
+            
+    form.recipients-data
+        p.invalid
+            position: absolute
+            margin-top: -30px
+            font-size: 14px
+            margin-bottom: 1px
+            text-align: start
+            color: $hoverNegative
+
+        input#download-file
+            display: none
+
+    label.download-file
+        cursor: pointer
+        background: $colorMain
+        padding: 10px 20px
+        border: 1px solid $colorMain
+        font-size: 21px
+        border-radius: 5px
+        color: $textBtn
+        &:hover
+            background: #006edb

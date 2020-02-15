@@ -1,0 +1,21 @@
+@import "styles/vars"
+
+div.positions-head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    opacity: 0
+    animation: 1s FadeIn forwards
+
+    input.positions-inp-search
+        width: 240px
+        border: 1px solid $colorMain
+        border-radius: 5px
+        padding: 5px
+        font-size: 18px
+
+    @keyframes FadeIn
+        0%
+            opacity: 0
+        100%
+            opacity: 1

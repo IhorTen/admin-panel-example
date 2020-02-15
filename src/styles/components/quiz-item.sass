@@ -1,0 +1,50 @@
+@import "styles/vars"
+
+li.quize-item-wrap
+    opacity: 0
+    animation: 0.5s SlideUp forwards
+    width: 49%
+    // margin: 0 10px
+    // border: 1px solid #eee
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    margin-top: 10px
+    font-size: 22px
+    padding: 15px
+    border-radius: 5px
+    border: 1px solid #eee
+    cursor: pointer
+    &.select
+        background: #eee
+
+    span.test-name
+        font-size: 22px
+        font-weight: 600
+        margin-bottom: 15px
+
+    p.test-descr
+        font-size: 16px
+
+    div.quiz-sub-info
+        align-self: center
+        font-size: 21px
+        font-weight: 600
+        margin: 15px 0
+        align-self: flex-start
+        // width: 50%
+        span
+            display: inline-block
+            font-weight: 400
+            margin-left: 10px
+
+    div.quiz-item-buttons
+        display: flex
+
+    div.quiz-item-checkbox
+        position: absolute
+        top: 10px
+        right: 10px

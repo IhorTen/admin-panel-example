@@ -1,0 +1,71 @@
+@import "styles/vars"
+
+aside.sidebar
+    width: 210px
+    z-index: 10
+    display: block
+    position: fixed
+    text-align: center
+    box-shadow: 6px 0px 10px -8px rgba(0,0,0,0.44)
+    overflow: auto
+    left: 0
+    bottom: 0
+    top: 0px
+    height: 100%
+    background: #fff
+    +tabletA
+        border-right: none
+        transition: transform 0.5s ease-in-out
+        &.hide
+            transform: translateX(-210px)
+        &.show
+            transform: translateX(0px)
+        img
+            display: none
+    +mobile
+        width: 100%
+        &.hide
+            transform: translateX(-100%)
+
+    div.logo
+        text-align: center
+        padding: 20px 5px
+        img
+            max-width: 120px
+
+    ul.sidebar-list
+        list-style: none
+        +tabletA
+            display: block
+            margin-top: 10px
+        a
+            font-size: 18px
+            color: #B4B4B4
+            display: block
+            padding: 15px
+            transition: 0.3s
+            border-left: 3px solid rgba(0, 0, 0, 0)
+            +tabletA
+                border-left: none
+                border-bottom: 1px solid rgba(0,0,0,0)
+            &:hover
+                background: rgba(0, 110, 219, 0.1)
+                color: #929292
+            &.active
+                background: rgba(0, 110, 219, 0.2)
+                border-color: #175ECA
+                color: $colorMain
+                +tabletA
+                    // border-left: none
+                    background: rgba(0, 0, 0, 0)
+
+    button.u-button
+        width: 90%
+        margin: 10px auto
+
+    button.refresh-sidebar
+        display: none
+        +tabletB
+            display: block 
+            span
+                padding: 0 5px

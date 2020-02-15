@@ -1,0 +1,73 @@
+@import "styles/vars"
+
+header.main-head
+    display: none
+    +tabletA
+        display: flex
+        position: fixed
+        width: 100%
+        justify-content: flex-end
+        align-items: center
+        padding: 5px 20px 5px 20px
+        z-index: 5
+        background: #fff
+        box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.44)
+
+    div.head-flex
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    div.head-logo
+        max-width: 100px
+        img
+            width: 100%
+
+button.head-menu
+    display: none
+    +tabletA
+        display: flex
+        position: fixed
+        top: 15px
+        left: 15px
+        flex-direction: column
+        justify-content: space-around
+        height: 31px
+        z-index: 20
+        cursor: pointer
+
+        &:focus
+            outline: none
+
+        div
+            width: 2rem
+            height: 0.25rem
+            border-radius: 10px
+            transition: all 0.3s linear
+            position: relative
+            transform-origin: 1px
+        &.show
+            div
+                background: #e27266
+                &:first-child
+                    transform: rotate(45deg)
+                &:nth-child(2)
+                    opacity: 0
+                    transform: translate(-20px)
+                &:nth-child(3)
+                    transform: rotate(-45deg)
+        &.hide
+            div
+                background: #0D0C1D
+                &:first-child
+                    transform: rotate(0deg)
+                &:nth-child(2)
+                    opacity: 1
+                    transform: translate(0px)
+                &:nth-child(3)
+                    transform: rotate(0deg)
+
+    span.user
+        display: inline-block
+        font-size: 21px
+        margin-right: 5px

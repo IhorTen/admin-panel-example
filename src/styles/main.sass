@@ -1,0 +1,49 @@
+@import "styles/vars"
+	
+html, body
+	width: 100%
+	height: 100%
+	position: relative
+
+body
+	margin: 0
+	padding: 0
+	font-family: $fontHead, sans-serif
+	box-sizing: border-box
+	padding-left: 210px
+	+tabletA
+		padding-left: 0
+	*
+		margin: 0
+		padding: 0
+		border: none
+		outline: none 
+		box-sizing: border-box
+		appearance: none
+		-webkit-overflow-scrolling: touch
+		text-decoration: none
+		color: inherit
+		background: none
+		border-radius: 0
+		font-family: $fontMain, sans-serif
+		transition: 0.3s
+		
+		&:before, &:after
+			box-sizing: border-box
+
+		&:invalid
+			box-shadow: none
+
+div.container
+	max-width: 1200px
+	margin: 0 auto
+
+div.a-panel-content
+	padding: 30px 20px 0 20px
+	flex-grow: 1
+	+tabletA
+		padding: 20px
+
+div.sidebar-container
+	+tabletA
+		display: none

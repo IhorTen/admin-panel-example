@@ -1,0 +1,103 @@
+@import "styles/vars"
+
+div.result-item
+    border-bottom: 1px solid #C4C4C4
+    opacity: 0
+    animation: 0.5s SlideUp forwards
+    &:nth-child(even)
+        background: #8a848415
+    +tabletA
+        padding-left: 20px
+    &.msg
+        margin-bottom: 0
+            
+
+    .bold
+        font-weight: 700
+
+    .subinfo-date
+        p
+            display: flex
+            justify-content: space-between
+            margin-bottom: 5px
+
+    .download-cv-btn
+        font-size: 12px
+        padding: 5px
+        min-width: auto
+        min-height: auto
+        +tabletA
+            font-size: 10px
+            padding: 5px
+
+    .view-content-btn
+        font-size: 13px
+        background: $colorMain
+        padding: 5px
+        min-width: 79px
+        min-height: 28px
+
+    div.user-name
+        font-size: 16px
+        font-weight: 600
+        position: relative
+        img
+            height: 60px
+            position: absolute
+            left: 20px
+            bottom: 0
+            padding-top: 8px
+
+    div.top-right-row
+        margin-bottom: 8px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        word-break: break-all
+        &:last-child
+            margin-bottom: 0
+        .bold
+            display: inline-block
+            width: 120px
+
+    span.contact-name
+        display: inline-block
+        width: 80px
+        
+    span.subinfo-title
+        font-size: 22px
+
+    div.subinfo-item
+        padding: 15px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        border-bottom: 1px solid #eee
+        div 
+            width: 30%
+        p
+            margin-bottom: 5px
+            &:last-child
+                margin-bottom: 0
+        &:hover
+            background: #eee
+
+    div.result-item-flex
+        display: flex
+        padding: 5px 0
+        font-size: 14px
+        word-break: break-word
+        & > div
+            padding: 0 10px
+        &.msg
+            align-items: center
+        .tests_score
+            .cognitive_test
+                word-break: keep-all
+                margin-bottom: 10px
+            .psychological_test
+                button.ps-t-btn
+                    font-size: 12px
+                    padding: 3px 5px
+                    min-width: 20px
+                    

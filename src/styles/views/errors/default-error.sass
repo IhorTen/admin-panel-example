@@ -1,0 +1,28 @@
+@import "styles/vars"
+
+div.v-default-error
+    height: 100vh
+    text-align: center
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    h3
+        font-size: 30px
+        margin-top: 15px
+
+    p
+        margin-top: 15px
+        a
+            display: inline-block
+            margin-left: 5px
+            color: $colorMain
+            &:hover
+                color: #000
+
+    div.error-info
+        position: absolute
+        top: 0
+        right: 0
+        padding: 25px

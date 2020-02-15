@@ -1,0 +1,60 @@
+@import "styles/vars"
+
+div.edit-position-modal
+
+    div.position-types-list
+        display: flex
+        min-height: 41px
+
+    div.position-type-item
+        display: flex
+        align-items: center
+        font-size: 18px
+        margin: 0 5px 0px 5px
+        border-radius: 5px
+        padding: 10px
+        transform: scale(0)
+        animation: 0.3s Scale forwards
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+
+    div.delete-type
+        font-size: 16px
+        margin-left: 10px
+        color: #000
+        cursor: pointer
+        *
+            &:hover
+                color: $negativeColor
+
+    div.add-type-btn
+        display: flex
+        flex-direction: column
+        justify-content: center
+        position: relative
+        border-radius: 100%
+        width: 30px
+        height: 30px
+        font-size: 25px
+        align-self: center
+        background: $colorMain
+        color: #fff
+        cursor: pointer
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+
+        ul.types-list
+            position: absolute
+            background: #fff
+            left: 130%
+            top: 50%
+            transform: translateY(-50%)
+            color: #000
+            font-size: 20px
+            max-height: 200px
+            overflow: auto
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+            animation: 0.3s FadeIn forwards
+            li
+                padding: 5px 10px
+                &:hover
+                    color: #fff
+                    background: $colorMain

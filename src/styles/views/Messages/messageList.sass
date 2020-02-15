@@ -1,0 +1,85 @@
+@import "styles/vars"
+
+main.v-message-page
+    +tabletA
+        padding-top: 59px
+    .w30
+        width: 30%
+    .w20
+        width: 20%
+    .w10
+        width: 10%
+
+    div.message-list-head
+        display: flex
+        justify-content: space-between
+        padding: 20px 10px
+        +tabletA
+            padding: 20px 20px 50px 20px
+
+        .btn-create
+            background: none
+            color: $colorMain
+            &:hover
+                background: $colorMain
+                color: $textBtn
+
+    div.message-list-head-left
+        display: flex
+        .list-search-wrap
+            margin-left: 20px
+            display: flex
+            align-items: center
+            img
+                margin-right: 10px
+            input.input_search
+                min-width: 300px
+                padding: 7px
+                border: 1px solid $borderInput
+                border-radius: 5px
+                font-size: 15px 
+
+    div.date-picker
+        .date-picker-from,
+        .date-picker-to
+            margin-left: 10px
+            span
+                font-size: 18px
+                font-family: $fontMain, sans-serif
+            input.date-from,
+            input.date-to
+                min-width: 100px
+                padding: 5px
+                border: 1px solid $borderInput
+                border-radius: 5px
+                font-size: 15px
+                margin-left: 3px
+                max-width: 220px
+
+    div.msg-table-head
+        display: flex
+        justify-content: flex-start
+        // align-items: center
+        padding: 8px 0
+        border-bottom: 1px solid #eee
+        // position: sticky
+        top: 0
+        background: #F7F7FF
+        margin-bottom: 10px
+        &.msg
+            margin-bottom: 0
+        
+        +tabletA
+            padding-left: 20px
+
+        p.msg-table-title
+            font-size: 18px
+            font-weight: 500
+            text-overflow: ellipsis
+            display: flex
+            align-items: center
+            color: #7778B4
+            position: relative
+            padding-left: 20px
+            &:not(:first-child)
+                border-left: 1px solid #C4C4C4

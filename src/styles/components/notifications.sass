@@ -1,0 +1,63 @@
+@import "styles/vars"
+
+div.notifications-wrap
+    width: 320px
+    // overflow: hidden
+    position: fixed
+    bottom: 30px
+    left: calc(50% - 160px)
+    // pointer-events: none
+    z-index: 9999
+    transform: translateY(0)
+
+    div.notifications-item
+        position: absolute
+        left: 0
+        bottom: 0
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 20px
+        border: 1px solid #000
+        opacity: 0
+        background: #fff
+        border-radius: 5px
+        pointer-events: none
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
+
+        &.success
+            border-color: green
+        
+        &.error
+            border-color: red
+
+        &.info
+            border-color: yellow
+
+        &.visible
+            animation: 500ms notificationShow $transitionIn forwards
+
+        &.hide
+            animation: 500ms notificationHide $transitionIn forwards
+
+    p.content
+        max-width: 80%
+        word-wrap: break-word
+        padding-right: 10px
+    
+    div.image
+        max-width: 20%
+        img
+            width: 100%
+
+    @keyframes notificationShow
+        0%
+            opacity: 0
+        100%
+            opacity: 1
+
+    @keyframes notificationHide
+        0%
+            opacity: 1
+        100%
+            opacity: 0

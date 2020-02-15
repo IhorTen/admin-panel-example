@@ -1,0 +1,137 @@
+@import "styles/vars"
+
+div.filters-head
+    display: flex
+    position: relative
+    justify-content: space-between
+    padding: 10px 10px 25px 10px
+    +tabletA
+        padding: 15px 0
+
+    div.logout-btn
+        background: $colorMain
+        border: 1px solid $colorMain
+        border-radius: 5px
+        color: #fff
+        padding: 10px 20px
+        font-size: 21px
+        display: inline-block
+        margin-left: 20px
+        cursor: pointer
+        &:hover
+            background: rgba(0,0,0,0)
+            color: $colorMain
+
+    div.refresh-btn
+        background: $colorMain
+        border: 1px solid $colorMain
+        border-radius: 5px
+        color: #fff
+        padding: 10px 20px
+        font-size: 21px
+        display: inline-block
+        cursor: pointer
+        &:hover
+            background: rgba(0,0,0,0)
+            color: $colorMain
+
+    div.filters-head-left
+        display: flex
+        align-items: center
+        +tabletB
+            flex-wrap: wrap
+
+    div.filters-head-item
+        display: flex
+        flex-direction: column
+        
+        &.query_position
+            width: 25%
+            align-items: start
+            +tabletB
+                width: 50%
+            .query
+                padding-bottom: 10px
+                input
+                    max-width: 200px
+
+        &.filter_date
+            width: 35%
+            align-items: start
+            input
+                border: none
+            +tabletB
+                width: 50%
+            .filters-inp-wrap
+                width: 100%
+                justify-content: flex-start
+                span
+                    width: 15%
+            i
+                position: absolute
+                font-size: 17px
+                right: -5px
+                top: 5px
+                z-index: 100
+                cursor: pointer
+                &:hover
+                    color: #ad4545
+        &.filter_score
+            width: 20%
+            align-items: end
+            .filters-inp-wrap
+                padding-bottom: 2px
+                .score-input
+                    width: 50%
+            +tabletB
+                width: 50%
+                .filters-inp-wrap
+                    justify-content: flex-start
+            input
+                width: 100%
+                padding: 4px
+            span
+                width: 30%
+        &.source_status
+            width: 20%
+            +tabletB
+                width: 50%
+                .filters-inp-wrap
+                    justify-content: flex-start
+                    span
+                        width: 15%
+            .source
+                padding-top: 5px
+                padding-bottom: 10px
+                .filters-input-search
+                    width: 60%
+            .status
+                    select
+                        +tabletB
+                            width: 100%
+
+    div.filters-inp-wrap
+        margin-left: 10px
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        padding-bottom: 5px
+        font-size: 14px
+        i
+            margin-right: 5px
+        span
+            display: inline-block
+            margin-right: 5px
+            font-size: 14px
+
+        input,
+        select
+            // border: 1px solid $borderInput
+            // border-radius: 5px
+
+        input
+            padding: 5px
+
+    div.count
+        position: absolute
+        bottom: 0

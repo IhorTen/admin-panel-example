@@ -1,0 +1,28 @@
+@import "styles/vars"
+
+div.v-users-management
+    +tabletA
+        padding-top: 59px
+
+    div.users-list
+        margin-top: 20px
+        display: flex
+        // justify-content: space-between
+        // align-items: center
+        flex-wrap: wrap
+
+    div.user-img-wrap
+        width: 150px
+        height: 150px
+        margin: 0 auto
+        border-radius: 100%
+        border: 1px solid #000
+        overflow: hidden
+        position: relative
+        margin-bottom: 20px
+        img
+            position: absolute
+            top: 0
+            left: 50%
+            transform: translateX(-50%)
+            width: 100%

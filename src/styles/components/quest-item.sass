@@ -1,0 +1,47 @@
+@import "styles/vars"
+
+li.quest-item-wrap
+    opacity: 0
+    transform: translateY(120px)
+    animation: 0.5s SlideUp forwards
+    word-wrap: break-word
+    width: 100%
+    max-width: 1555px
+
+a.quest-item
+    display: flex
+    justify-content: space-between
+    align-items: center
+    font-size: 22px
+    padding: 15px
+    border-radius: 5px
+    border: 1px solid #eee
+    margin-bottom: 10px
+    word-wrap: break-word
+    width: 100%
+    &:hover
+        background: #eee
+
+    div.quest-left
+        display: flex
+        align-items: center
+        max-width: 75%
+
+    div.quest-name
+        font-size: 22px
+        width: 100%
+        word-wrap: break-word
+        img
+            max-width: 50%
+
+    p.quest-descr
+        font-size: 16px
+        margin-left: 30px
+
+    div.quest-right
+        display: flex
+        min-width: 320px
+        margin-left: 20px
+
+    button.create-quest-btn
+        margin-right: 10px

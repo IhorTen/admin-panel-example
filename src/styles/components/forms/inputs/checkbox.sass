@@ -1,0 +1,33 @@
+@import "styles/vars"
+
+div.custom-check-wrap
+    position: relative
+
+    input.u-check
+        position: absolute
+        opacity: 0
+        &:checked + label
+            div.u-custom-check
+                &:before
+                    opacity: 1
+
+    div.u-custom-check
+        width: 18px
+        height: 18px
+        border: 1px solid $colorMain
+        border-radius: 3px
+        position: relative
+        margin-right: 10px
+        cursor: pointer
+        &:before
+            content: ""
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            width: 11px
+            height: 11px
+            border-radius: 3px
+            background: $colorMain
+            opacity: 0
+            transition: 0.2s

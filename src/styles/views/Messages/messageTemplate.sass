@@ -1,0 +1,105 @@
+@import "styles/vars"
+
+div.message-template
+    text-align: center
+
+    select.select-templates,
+    button.btn-go,
+    input.temp-name,
+    .temp-cont
+        display: block
+        margin: 0 auto
+
+    button.btn-go,
+    button.btn-create-new-temp
+        font-size: 18px
+        line-height: 22px
+        min-width: auto
+        min-height: auto
+
+    div.use-template
+
+        .use-template-head
+            margin-top: 20px
+            margin-bottom: 20px
+            font-size: 32px
+            line-height: 43px
+            font-family: $fontMain, sans-serif
+        .use-template-body
+            position: relative
+            max-width: 400px
+            margin: 0 auto
+            .select-templates
+                font-size: 18px 
+                min-width: 400px
+                padding: 5px
+                border: 1px solid $borderInput
+                border-radius: 5px
+                margin-bottom: 30px
+                &.invalid
+                    border: 1px solid $hoverNegative
+            p.invalid
+                position: absolute
+                left: 10px
+                top: 35px
+                font-size: 15px
+                color: $hoverNegative
+            .btn-go
+                text-transform: uppercase
+
+    h3.template-txt
+        font-size: 18px
+        line-height: 22px
+        text-transform: uppercase
+        margin-bottom: 10px
+        margin-top: 20px
+
+    div.create-template
+        h2
+            font-size: 32px
+            line-height: 43px
+            font-family: $fontMain, sans-serif
+            margin-bottom: 20px
+
+        .new-template
+            position: relative
+            max-width: 400px
+            margin: 0 auto
+            &.mails
+                max-width: 700px
+                div.wysiwyg-head
+                    justify-content: center
+                    margin-top: 0
+            &.invalid
+                .temp-subj,
+                .temp-cont
+                    border: 1px solid $hoverNegative
+            .temp-subj,
+            .temp-cont
+                padding: 5px
+                border: 1px solid $borderInput
+                border-radius: 5px
+            .temp-subj
+                margin-bottom: 10px
+                min-width: 400px
+                font-size: 18px
+            .temp-cont
+                text-align: start
+                margin-bottom: 10px
+                &.sms
+                    font-size: 18px
+                    min-width: 400px
+                &.wysiwyg-input
+                    min-width: calc( 100vw/2 - 240px )
+                    height: 250px
+
+            p.invalid
+                font-size: 15px
+                color: $hoverNegative
+                margin-bottom: 10px
+
+
+
+
+
+            
